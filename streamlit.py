@@ -109,7 +109,7 @@ grade_df = pd.merge(loan_amount_by_grade, grade_counts, on='grade')
 fig6 = px.bar(grade_df, x='grade', y='loan_amnt',
               labels={'grade': 'Grade', 'loan_amnt': 'total Loan Amount'},
               hover_data=grade_counts,
-              hover_name=grade_counts,
+
               title='total Loan Amount by Grade')
 
 
