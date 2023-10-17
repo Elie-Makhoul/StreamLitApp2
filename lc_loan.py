@@ -132,3 +132,6 @@ with st.container():
         st.plotly_chart(fig5, use_container_width=True)
     with col6:
         st.plotly_chart(fig6, use_container_width=True)
+
+
+# link to streamlit app: https://strmlitapp2.streamlit.app/
