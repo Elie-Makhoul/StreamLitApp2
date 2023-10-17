@@ -1,7 +1,6 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-from streamlit_dynamic_filters import DynamicFilters
 
 
 # Load the data
