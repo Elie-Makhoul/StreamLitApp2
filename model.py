@@ -12,21 +12,23 @@ from sklearn.metrics import accuracy_score, classification_report
 df = pd.read_csv("csv/LC_Loan_Modified.csv")
 
 
-def one_hot_encode_all(df):
-    # Select non-numerical columns for one-hot encoding
-    non_numeric_columns = df.select_dtypes(exclude=['number']).columns
+# function to transform non-numeric columns to numeric through hot encoding
 
-    # Perform one-hot encoding for each non-numerical column
-    for col in non_numeric_columns:
-        df = pd.concat([df, pd.get_dummies(df[col], prefix=col)], axis=1)
-        df.drop(col, axis=1, inplace=True)
+# def one_hot_encode_all(df):
+#     # Select non-numerical columns for one-hot encoding
+#     non_numeric_columns = df.select_dtypes(exclude=['number']).columns
 
-    return df
+#     # Perform one-hot encoding for each non-numerical column
+#     for col in non_numeric_columns:
+#         df = pd.concat([df, pd.get_dummies(df[col], prefix=col)], axis=1)
+#         df.drop(col, axis=1, inplace=True)
+
+#     return df
 
 
 df['loan_status'] = df['loan_status'].map({'Charged Off': 1, 'Fully Paid': 0})
-# %%
 
+# %%
 # Features (X) and target variable (y)
 non_numeric_columns = df.select_dtypes(exclude=['number']).columns
 df = df.drop(columns=non_numeric_columns)
