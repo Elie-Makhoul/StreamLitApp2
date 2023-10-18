@@ -1,3 +1,5 @@
+# this is a playground  file
+
 import pandas as pd
 
 df = pd.read_csv("csv/LC_Loan_Modified.csv")
