@@ -4,9 +4,8 @@ import plotly.express as px
 
 # Load the data
 
-file_path = "csv/LC_Loan_Modified.csv"
 
-df = pd.read_csv(file_path)
+df = pd.read_csv("csv/LC_Loan_Modified.csv")
 
 
 # Set page configuration
